@@ -2,3 +2,6 @@ GET https://localhost:5001 HTTP/1.1
 
 ###
 GET https://localhost:5001/api/commands HTTP/1.1
+
+###
+GET https://localhost:5001/api/commands/0 HTTP/1.1
