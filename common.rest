@@ -4,15 +4,7 @@ GET https://localhost:5001 HTTP/1.1
 GET https://localhost:5001/api/commands HTTP/1.1
 
 ###
-GET https://localhost:5001/api/commands/0 HTTP/1.1
+GET https://localhost:5001/api/commands/5 HTTP/1.1
 
 ###
-GET https://pitools.ru/ HTTP/1.1
-Host: pitools.ru
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: language=ru-ru; currency=RUB; _ga=GA1.2.1110109617.1604047535; tmr_reqNum=88; tmr_lvid=69b295f5126cc382db1f4437d98362bd; tmr_lvidTS=1604047535222; _ym_uid=1604047535113917861; _ym_d=1604047535; show-column-checkboxes=1; id-column=1; product-column=1; model-column=1; category-column=1; manufacturer-column=1; price-column=1; qty-column=1; view-column=1; edit-column=1; OCSESSID=48eff606d2836bf12a26f7e8b4; tmr_detect=1%7C1605548020260; _gid=GA1.2.2023267035.1605547950; _ym_isad=1; _ym_visorc_50899253=w; _gat_gtag_UA_127801367_1=1
-Upgrade-Insecure-Requests: 1
+GET https://localhost:5001/api/com/ HTTP/1.1
