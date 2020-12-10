@@ -4,7 +4,37 @@ GET https://localhost:5001 HTTP/1.1
 GET https://localhost:5001/api/commands HTTP/1.1
 
 ###
-GET https://localhost:5001/api/commands/4 HTTP/1.1
+GET https://localhost:5001/api/commands/5 HTTP/1.1
 
 ###
 GET https://localhost:5001/api/com/ HTTP/1.1
+
+###
+POST https://localhost:5001/api/commands/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "howTo": "Build a .NET Core app",
+    "platform": ".NET Core CLI",
+    "commandLine": "dotnet build"
+}
+
+###
+PUT https://localhost:5001/api/commands/5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "howTo": "Run a .NET Core app",
+    "platform": ".NET Core CLI",
+    "commandLine": "dotnet run"
+}
+
+###
+PATCH https://localhost:5001/api/commands/5 HTTP/1.1
+Content-Type: application/json
+
+[{
+    "op": "replace",
+    "path": "/HowTo",
+    "value": "Run a .NET Core 3.1 App"
+}]
