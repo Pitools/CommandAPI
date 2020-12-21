@@ -38,3 +38,12 @@ Content-Type: application/json
     "path": "/HowTo",
     "value": "Run a .NET Core 3.1 App"
 }]
+###
+PATCH https://api.ulmer.ru/api/commands/5 HTTP/1.1
+Content-Type: application/json
+
+[{
+    "op": "replace",
+    "path": "/HowTo",
+    "value": "Run a .NET Core 3.1 App"
+}]
