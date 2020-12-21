@@ -38,12 +38,19 @@ Content-Type: application/json
     "path": "/HowTo",
     "value": "Run a .NET Core 3.1 App"
 }]
+
+### Azure
+GET https://ulmerapi.azurewebsites.net/api/commands HTTP/1.1
+
+### Azure
+GET https://ulmerapi.azurewebsites.net/api/commands/2 HTTP/1.1
+
 ###
-PATCH https://api.ulmer.ru/api/commands/5 HTTP/1.1
+POST https://ulmerapi.azurewebsites.net/api/commands/ HTTP/1.1
 Content-Type: application/json
 
-[{
-    "op": "replace",
-    "path": "/HowTo",
-    "value": "Run a .NET Core 3.1 App"
-}]
+{
+    "howTo": "Run and build application",
+    "platform": "Entity Framework Core Command Line",
+    "commandLine": "dotnet run"
+}
