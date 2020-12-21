@@ -70,3 +70,7 @@ namespace CommandAPI
 // git add .
 // git commit -m “Added a reminder to clean up code”
 // git push origin master
+
+// git pull
+
+// git pull origin master
