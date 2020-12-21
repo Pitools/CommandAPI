@@ -17,3 +17,4 @@ steps:
     command: test
     projects: '**/*Tests/*.csproj'
     testRunTitle: 'xUNit Test Run'
+    majorVersion: 5
