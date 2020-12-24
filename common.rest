@@ -49,8 +49,9 @@ GET https://ulmerapi.azurewebsites.net/api/commands/2 HTTP/1.1
 POST https://ulmerapi.azurewebsites.net/api/commands/ HTTP/1.1
 Content-Type: application/json
 
-{
-    "howTo": "Run and build application",
-    "platform": "Entity Framework Core Command Line",
-    "commandLine": "dotnet run"
-}
+  {
+    "howTo": "Build a .NET Core app",
+    "platform": ".NET Core CLI",
+    "commandLine": "dotnet build"
+  }
+
