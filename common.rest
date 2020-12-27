@@ -39,11 +39,15 @@ Content-Type: application/json
     "value": "Run a .NET Core 3.1 App"
 }]
 
+### git-on.ru 51.116.145.33
 ### Azure
 GET https://ulmerapi.azurewebsites.net/api/commands HTTP/1.1
 
 ### Azure
-GET https://ulmerapi.azurewebsites.net/api/commands/2 HTTP/1.1
+GET https://git-on.ru/api/commands HTTP/1.1
+
+### Azure
+GET https://ulmerapi.azurewebsites.net/api/commands/32 HTTP/1.1
 
 ###
 POST https://ulmerapi.azurewebsites.net/api/commands/ HTTP/1.1

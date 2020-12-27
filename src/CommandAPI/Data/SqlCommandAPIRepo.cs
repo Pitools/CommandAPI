@@ -32,7 +32,7 @@ namespace CommandAPI.Data
         
         public IEnumerable<Command> GetAllCommands()
         {
-            return _context.CommandItems.ToList();
+            return _context.CommandItems.ToList().OrderBy(c => c.Id);
         }
 
         public Command GetCommandById(int id)
