@@ -19,6 +19,7 @@ namespace CommandAPI
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
@@ -31,11 +32,11 @@ namespace CommandAPI
         {
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(
+                options.AddPolicy(MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.AllowAnyOrigin();
-                        //builder.WithOrigins("https://ushal.ru");
+                        // builder.AllowAnyOrigin();
+                        builder.WithOrigins("https://ushal.ru");
                     });
 
             });
@@ -78,7 +79,7 @@ namespace CommandAPI
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthentication();
             app.UseAuthorization();
