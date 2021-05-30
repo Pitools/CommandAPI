@@ -34,7 +34,8 @@ namespace CommandAPI
                 options.AddDefaultPolicy(
                     builder =>
                     {
-                        builder.WithOrigins("https://ushal.ru");
+                        builder.AllowAnyOrigin();
+                        //builder.WithOrigins("https://ushal.ru");
                     });
 
             });
