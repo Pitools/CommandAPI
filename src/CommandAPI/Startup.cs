@@ -36,7 +36,7 @@ namespace CommandAPI
                     builder =>
                     {
                         // builder.AllowAnyOrigin();
-                        builder.WithOrigins("https://ushal.ru");
+                        builder.WithOrigins("https://ushal.ru", "https://localhost:1337");
                     });
 
             });
