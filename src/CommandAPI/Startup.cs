@@ -29,6 +29,16 @@ namespace CommandAPI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("https://ushal.ru");
+                    });
+
+            });
+
             var builder = new NpgsqlConnectionStringBuilder();
             builder.ConnectionString = Configuration.GetConnectionString("PostgreSqlConnection");
             builder.Username = Configuration["UserID"];
@@ -67,6 +77,8 @@ namespace CommandAPI
 
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -77,11 +89,3 @@ namespace CommandAPI
         }
     }
 }
-
-// git add .
-// git commit -m “Added a reminder to clean up code”
-// git push origin master
-
-// git pull
-
-// git pull origin master
